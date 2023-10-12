@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavbarComponent from './component/NavbarComponent';
 import Photo from './component/Photo';
+import Photos from './component/Photos';
 import About from './component/About'
 import Contact from './component/Contact'
 function App() {
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route path="/contact">
               <Contact />
+            </Route>
+            <Route path="/photo/:id">
+              <Photos />
             </Route>
         </Switch> 
     </BrowserRouter>

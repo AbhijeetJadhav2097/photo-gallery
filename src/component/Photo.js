@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import { Container, Card,Row, Col, Spinner} from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 
 const Photo = () => {
@@ -21,6 +22,9 @@ const Photo = () => {
 
                     </Card.Text>
                     <a href={photo.url} className="btn btn-dark btn-sm">View Details</a>
+                    <Link to={`/photo/${photo.id}`} className="btn btn-dark btn-sm" style={{margin : "0px 5px"}}>
+                      View Enlarged
+                        </Link>
                     </Card.Body>
                 </Card>
                 </Col>
